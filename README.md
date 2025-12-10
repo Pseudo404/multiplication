@@ -1,54 +1,78 @@
-# ➗ Table de multiplication (Console)
+# ➗ Quiz de multiplication — Évolution d’un projet
 
-Ce dépôt regroupe **mes premiers jeux en console Python**, centrés sur l’entraînement aux tables de multiplication.  
-Ces projets font partie de **mes tout premiers codes**, écrits lors de mes débuts en programmation.
+Ce dépôt regroupe **trois versions successives** d’un même concept :  
+un **jeu de quiz de multiplication** en Python.
 
-Ils illustrent parfaitement mon **évolution technique**, du code très naïf et répétitif vers un code plus court, lisible et efficace.
+À travers ces trois fichiers, on peut suivre **l’évolution de mon niveau**, depuis mes tout premiers essais en programmation jusqu’à une version graphique plus aboutie.
 
 ---
 
-## 🧠 table_multiplication.py — Version originale
+## 🧠 table_multiplication.py — Version originale (console)
 
-**table_multiplication.py** est **mon tout premier jeu en console**.  
-Il s’agit d’un test de mathématiques permettant de s’entraîner aux tables de multiplication.
+**table_multiplication.py** est **mon tout premier jeu en console** et l’un de mes **tout premiers codes Python**.
 
 ### 🔹 Principe
 - L’utilisateur choisit une table de multiplication via un `input`
-- Chaque calcul est affiché un par un (`1x2`, `1x3`, `1x4`, etc.)
+- Chaque calcul est affiché manuellement (`1x2`, `1x3`, `1x4`, etc.)
 - Une saisie est demandée pour chaque calcul
-- Toute la logique repose principalement sur des **conditions `if`**
+- Toute la logique repose presque exclusivement sur des conditions `if`
 
 ### ⚠️ État du code
-- **960 lignes**
-- Code extrêmement répétitif
-- Aucune abstraction (pas de boucles efficaces, pas de fonctions)
-- Lisibilité faible
+- Environ **900 lignes**
+- Code très répétitif
+- Aucune abstraction
+- Peu lisible et difficilement maintenable
 
-➡️ **C’est un code objectivement mauvais**, mais **fonctionnel**.  
-Il fait partie intégrante de mes débuts et représente ma première confrontation à la logique algorithmique.
+➡️ Ce code est objectivement mauvais selon les standards actuels,  
+mais **il fonctionne** et représente ma toute première expérience avec la logique algorithmique.
 
 ---
 
-## 🔄 #--Mathématiques_remaster--#.py — Version remasterisée
+## 🔄 #--Mathématiques_remaster--#.py — Version remasterisée (console)
 
-Ce fichier est une **refonte complète** du projet initial, réalisée plus tard, une fois que j’avais compris :
-- les boucles
-- la génération aléatoire
-- la simplification de la logique
+Cette version est une **refonte complète** de la première, réalisée après avoir acquis de meilleures bases.
 
-### ✅ Améliorations majeures
-- **23 lignes de code** au lieu de 960 lignes
-- Génération aléatoire des multiplications
+### ✅ Améliorations
+- **23 lignes de code** environ
+- Multiplications générées aléatoirement
 - Système de score :
-  - +1 point pour une bonne réponse
-  - -1 point pour une mauvaise
+  - +1 pour une bonne réponse
+  - -1 pour une mauvaise réponse
   - victoire à 20 points
-- Code plus lisible, plus propre et plus maintenable
+- Logique simplifiée et beaucoup plus lisible
 
-### 🔹 Principe du jeu
-- Une question de multiplication est générée aléatoirement
+### 🔹 Principe
+- Une multiplication aléatoire est affichée
 - Le joueur répond via la console
 - Le score évolue jusqu’à atteindre 20 points
+
+Cette version marque un **premier vrai déclic** dans ma compréhension des boucles et de la simplification du code.
+
+---
+
+## 🖥️ quiz.py — Version graphique (GUI)
+
+**quiz.py** est la version la plus récente du projet.  
+Elle reprend le principe du quiz aléatoire, mais avec une **interface graphique**.
+
+### ✅ Nouveautés
+- Interface graphique avec `tkinter` et `customtkinter`
+- Bouton de validation
+- Champ de saisie
+- Affichage :
+  - de la question
+  - du score (bonnes réponses / questions)
+  - du retour immédiat (+1 / mauvaise réponse)
+
+### 🔹 Principe
+- Une multiplication aléatoire est affichée à l’écran
+- Le joueur saisit sa réponse
+- Le score est mis à jour en temps réel
+- Une nouvelle question est générée automatiquement
+
+Cette version marque mon passage :
+- du **console → graphique**
+- d’un script basique → une application interactive
 
 ---
 
@@ -57,21 +81,28 @@ Ce fichier est une **refonte complète** du projet initial, réalisée plus tard
 - **Langage** : Python
 - **Librairies** :
   - `random` (bibliothèque standard)
+  - `tkinter`
+  - `customtkinter`
 - **Concepts abordés** :
-  - Entrées utilisateur (`input`)
-  - Conditions (`if`)
-  - Boucles (`while`)
+  - Entrées utilisateur (`input`, `Entry`)
+  - Conditions
+  - Boucles
   - Génération aléatoire
-  - Gestion d’un score
+  - Gestion du score
+  - Interfaces graphiques (GUI)
 
 ---
 
 ## ▶️ Lancer les projets
 
-Prérequis :
-- **Python 3**
-
-Lancer la version originale :
-
+### Version console (ancienne) :
 ```bash
 python table_multiplication.py
+```
+```bash
+python "#--Mathématiques_remaster--#.py"
+```
+```bash
+pip install customtkinter
+python quiz.py
+```

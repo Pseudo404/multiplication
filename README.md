@@ -18,7 +18,7 @@ un **jeu de quiz de multiplication** en Python.
 - Toute la logique repose presque exclusivement sur des conditions `if`
 
 ### ⚠️ État du code
-- Environ **900 lignes**
+- De **960 lignes**
 - Code très répétitif
 - Aucune abstraction
 - Peu lisible et difficilement maintenable
